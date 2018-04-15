@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+ruby '2.3.7'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -34,6 +36,7 @@ end
 group :production do
  gem 'pg', '0.15.1'
    gem 'rails_12factor'
+   
 end
 
 # Use unicorn as the app server
