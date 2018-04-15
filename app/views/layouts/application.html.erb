@@ -9,11 +9,9 @@
 <body>
   
   <%= flash.each do |mane, msg| %>
-  
   <ul>
     <li> <%= msg %> </li>
   </ul>
-  
   <% end %>
 
 <%= yield %>
