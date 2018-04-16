@@ -11,6 +11,19 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+#ignor all coverage file
+coverage
+
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+.idea
+config/database.yml
+/node_modules
+/yarn-error.log
+
+.byebug_history
+
+/public/uploads
