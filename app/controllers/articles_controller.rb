@@ -1,11 +1,15 @@
 class ArticlesController < ApplicationController
   
   before_action :set_article, only: [:edit, :update, :show, :destroy]
-  
-  def index 
-  @articles = Article.all
+
+  def index
+  if params[:tag]
+    @articles = Article.tagged_with(params[:tag])
+  else
+    @articles = Article.all
   end
-  
+  @articles = @articles.order(created_at: :desc).paginate(page:params[:page], per_page: 3 )
+end
   
   def new
     @article = Article.new
